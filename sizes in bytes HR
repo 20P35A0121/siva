@@ -1,0 +1,45 @@
+import java.util.*;
+import java.io.*;
+public class Main{
+    public static void main(String[] ar){
+        Scanner cam = new Scanner(System.in);
+        int z = cam.nextInt();
+        for(int i=0;i<z;i++)
+        {
+            //if()
+            try
+            {
+                long y=cam.nextLong();
+                System.out.println(y+" can be fitted in :");
+                if(y>=-(Math.pow(2,7)) && y<=(Math.pow(2,7)))
+                {
+                    System.out.println(" * byte");
+                    System.out.println(" * short");
+                    System.out.println(" * int");
+                    System.out.println(" * long");
+                }
+                else if(y>=-(Math.pow(2,15)) && y<=(Math.pow(2,15)))
+                {
+                    System.out.println(" * short");
+                    System.out.println(" * int");
+                    System.out.println(" * long");
+                }
+                else if(y>=-(Math.pow(2,31)) && y<=(Math.pow(2,31)))
+                {
+                    System.out.println(" * int");
+                    System.out.println(" * long");
+                }
+                else if(y>=-(Math.pow(2,63)) && y<=(Math.pow(2,63)))
+                {
+                    System.out.println(" * long");
+                }
+                
+            }
+            catch (Exception e)
+           // else
+            {
+                System.out.println(cam.next()+" can't be fitting in");
+            }
+        }
+    }
+}
