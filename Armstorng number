@@ -1,0 +1,28 @@
+import java.util.*;
+import java.math.*;
+public class Main {
+    public static void main(String[] ar)
+    {
+        Scanner z = new Scanner(System.in);
+        int n=z.nextInt();
+        int t=n,a=n,f,sum=0,l=0;
+        while(n>0)
+        {
+            l++;
+            n=n/10;
+        }
+        while(a>0)
+        {
+            f=a%10;
+            sum=sum+((int)Math.pow(f,l));
+            a=a/10;
+        }
+        if(t==sum){
+            System.out.println(t+" is an armstrong number ");
+        }
+        else{
+            System.out.println(t+" not an armstrong number");
+        }
+    }
+    
+}
