@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] ar) {
+        Scanner cam = new Scanner(System.in);
+        int n = cam.nextInt();
+        int m = cam.nextInt();
+        int l=n;
+        if(n>m){
+            n=m;
+            m=l;
+        }
+        // Print multiplication expressions
+        int i = n;
+        while (i < m) {
+            System.out.print(i + "*" + (i + 1) + ",");
+            i++;
+        }
+        // Print the last expression without a comma
+        System.out.println(i + "*" + (i + 1));
+
+        // Print results
+        int j = n;
+        while (j < m) {
+            System.out.print(j * (j + 1) + ",");
+            j++;
+        }
+        // Print the last result without a comma
+        System.out.println(j * (j + 1));
+    }
+}
