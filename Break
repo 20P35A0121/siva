@@ -1,0 +1,17 @@
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.printf("Give me any Number :");
+        int num = sc.nextInt();
+        int ans = (num%2);
+        switch(ans){
+            case 0:
+                    System.out.printf("Even Number");
+                    break;
+            default:
+            System.out.printf("Odd Number");
+            break;
+        }
+    }
+}
