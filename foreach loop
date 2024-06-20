@@ -1,0 +1,9 @@
+class Main{
+   public static void main(String[] arg){
+   int[][] check ={{1,8,4},{9,7,2,},{7,6,4}};
+   int sum =0;
+   for(int[] chess : check){
+   		for(int value : chess){
+   		sum+=value;}}
+        System.out.println(sum);}
+        }
