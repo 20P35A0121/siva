@@ -1,0 +1,26 @@
+import java.util.*;
+class Main{
+    public static void main(String[] arg){
+        Scanner sc = new Scanner(System.in);
+        String check = sc.nextLine();
+        String[] chess = check.split(" ");
+        StringBuilder sb2 =new StringBuilder();
+        for(int i=0;i<chess.length;i++){
+            for(int j=0;j<chess[i].length();j++){
+                StringBuilder sb =new StringBuilder();
+                if(i%2==0){
+                   sb.append(chess[i].toUpperCase());
+                   sb2.append(sb+" ");
+                   break;
+                }
+                else if(i%2!=0){
+                    sb.append(chess[i]);
+                    sb.reverse();
+                    sb2.append(sb+" ");
+                    break;
+                }
+            }
+        }
+        System.out.println(sb2.toString().trim());
+    }
+}
