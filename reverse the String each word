@@ -1,0 +1,15 @@
+import java.util.*;
+class Main{
+    public static void main(String[] arg){
+        Scanner sc = new Scanner(System.in);
+        String check = sc.nextLine();
+        String ans ="";
+        String[] chess = check.split(" ");
+        for(String word : chess){//for each loop
+            StringBuilder sb = new StringBuilder(word);
+            sb.reverse();
+            ans+=sb.toString()+" ";
+        }
+        System.out.println(ans.trim());
+    }
+}
